@@ -1,0 +1,18 @@
+CREATE DATABASE Lab10
+GO
+USE AdventureWorks2019 
+SELECT*INTO Lab10.dbo.WorkOrder FROM Production.WorkOrder
+GO
+USE Lab10 
+SELECT*INTO WorkOrderIX FROM WorkOrder
+GO
+SELECT*FROM WorkOrder
+GO
+SELECT*FROM WorkOrderIX
+GO
+CREATE INDEX IX_WorkOrderID ON WorkOrderIX(WorkOrderID)
+GO
+SELECT*FROM WorkOrder where WorkOrderID=72000
+GO
+SELECT*FROM WorkOrderIX where WorkOrderID=72000
+GO
